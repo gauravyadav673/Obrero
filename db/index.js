@@ -37,6 +37,14 @@ var userSchema=mongoose.Schema({
 	password:{
 		type:String,
 		required:true
+	},
+	lat:{
+			type:String,
+		required:true
+	},
+	long:{
+			type:String,
+		required:true
 	}
 
 });
@@ -60,7 +68,9 @@ exports.addUser=function(req,res){
 	locality:req.query.locality,
 	phoneno:req.query.phoneno,
 	address:req.query.address,
-	password:req.query.password
+	password:req.query.password,
+	lat:req.query.lat,
+	long:req.query.long
 	});
 
 	user.save(function(err,info){
@@ -117,6 +127,14 @@ var workerSchema=mongoose.Schema({
 	occupation:{
 		type:String,
 		required:true
+	},
+	lat:{
+			type:String,
+		required:true
+	},
+	long:{
+			type:String,
+		required:true
 	}
 
 });
@@ -144,7 +162,9 @@ exports.addWorker=function(req,res){
 	phoneno:req.query.phoneno,
 	password:req.query.password,
 	address:req.query.address,
-	occupation:req.query.occupation
+	occupation:req.query.occupation,
+	lat:req.query.lat,
+	long:req.query.long
 	});
 
 	worker.save(function(err,info){
