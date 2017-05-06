@@ -26,6 +26,7 @@ app.get('/api/adduser',db.addUser);
 app.get('/api/addworker',db.addWorker);
 app.get('/api/loginuser',db.loginUser);
 app.get('/api/loginworker',db.loginWorker);
+app.get('/api/searchworker',db.searchworker);
 
 
 //app.post('/loginuser',db.loginUser);
