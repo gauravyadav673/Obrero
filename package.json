@@ -1,0 +1,11 @@
+{
+  "name": "angelhacks",
+  "version": "1.0.0",
+  "description": "project for angelhacks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
