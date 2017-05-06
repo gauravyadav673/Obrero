@@ -229,18 +229,11 @@ exports.loginUser=function(req,res){
 exports.searchworker=function(req,res){
 	occupation=req.query.occupation;
 	locality=req.query.locality;
-	Worker.findOne({locality:locality},function(err,user){
-		if(user)
-		{
-			if(user.password==req.query.password)
-				{
-					console.log('The User exists');
+	Worker.find({locality:locality,occupation:occupation},function(err,worker){
+		if(worker)
+		{		
 				 	res.send(user);
-				}
-				else
-				{
-					res.redirect('/');			
-				}
+				
 		}
 		else
 		{
